@@ -85,8 +85,9 @@ classDiagram
         +getPrice()
     }
     
-     User "1" *-- "0..*" Order : contains
+     User "1" *-- "0..*" Order : contains (composition)
      Order "1" --> "1" Product : references
+     note for User "User owns orders completely"
 ```
 
 ## State Diagrams - System states and transitions
