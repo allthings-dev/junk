@@ -57,18 +57,23 @@ classDiagram
         -string email
         -string password
         -string name
+        -List~Order~ orders
         +login()
         +logout()
         +updateProfile()
+        +getOrders() List~Order~
     }
     
     class Order {
         -int id
         -Date createdAt
         -float total
+        -User user
+        -List~Product~ products
         +calculateTotal()
-        +addItem()
-        +removeItem()
+        +addItem(Product)
+        +removeItem(Product)
+        +getUser() User
     }
     
     class Product {
@@ -80,10 +85,9 @@ classDiagram
         +getPrice()
     }
     
-     User "1" --> "0..*" Order : places
-    Order "1" --> "1..*" Product : contains
+     User "1" *-- "0..*" Order : contains
+     Order "1" --> "1" Product : references
 ```
-
 
 ## State Diagrams - System states and transitions
 
