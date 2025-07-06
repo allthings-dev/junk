@@ -176,3 +176,78 @@ journey
       Receive product   : 5: User
       Leave review      : 3: User
 ```
+
+```mermaid
+pie title My Pie Chart
+    "Label 1" : 42.96
+    "Label 2" : 50.05
+    "Label 3" : 10.01
+```
+
+Use HTML/CSS Layout (Recommended)
+<div style="display: flex; gap: 20px;">
+  <div style="flex: 1;">
+    <h3>Q1 Sales</h3>
+    
+```mermaid
+pie title Q1 Revenue
+    "Product A" : 45
+    "Product B" : 30
+    "Product C" : 25
+```
+  </div>
+  <div style="flex: 1;">
+    <h3>Q2 Sales</h3>
+    
+```mermaid
+pie title Q2 Revenue
+    "Product A" : 40
+    "Product B" : 35
+    "Product C" : 25
+```
+  </div>
+</div>
+
+
+Using markdown tables
+| Q1 Performance | Q2 Performance |
+|----------------|----------------|
+| ```mermaid<br>pie title Q1<br>"Sales" : 60<br>"Marketing" : 40<br>``` | ```mermaid<br>pie title Q2<br>"Sales" : 70<br>"Marketing" : 30<br>``` |
+
+
+Sequential Charts with Clear Separation
+## Side-by-Side Comparison
+
+### Before Implementation
+```mermaid
+pie title Before - Issue Distribution
+    "Bug Reports" : 45
+    "Feature Requests" : 30
+    "Performance Issues" : 25
+```
+
+### After Implementation
+```mermaid
+pie title After - Issue Distribution
+    "Bug Reports" : 25
+    "Feature Requests" : 50
+    "Performance Issues" : 25
+```
+
+
+
+4. Use Subgraphs in Flowcharts
+```mermaid
+flowchart TD
+    subgraph "Q1 Results"
+        A[Sales: 45%]
+        B[Marketing: 30%]
+        C[Operations: 25%]
+    end
+    
+    subgraph "Q2 Results"
+        D[Sales: 50%]
+        E[Marketing: 25%]
+        F[Operations: 25%]
+    end
+```
