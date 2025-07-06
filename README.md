@@ -34,7 +34,7 @@ sequenceDiagram
     App1-->>-Database1: Query
     Database1-)App1: Return results
     App1--xUser1: Display data
-    User1->>User1 Validates data
+    User1->>User1: Validates data
 ```
 
 
