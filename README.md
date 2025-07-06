@@ -23,9 +23,9 @@ sequenceDiagram
     participant Database
     
     User->>App: Request data
-    App->>Database: Query
+    App->Database: Query
     Database-->>App: Return results
-    App-->>User: Display data
+    App-->User: Display data
 ```
 
 
