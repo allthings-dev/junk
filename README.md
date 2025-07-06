@@ -80,8 +80,8 @@ classDiagram
         +getPrice()
     }
     
-    User ||--o Order : places
-    Order ||--o Product : contains
+    User ||--o{ Order : places
+    Order ||--o{ Product : contains
 ```
 
 
@@ -137,8 +137,8 @@ erDiagram
     }
     
     CUSTOMER ||--o{ ORDER : places
-    ORDER ||--o{ ORDER_ITEM : contains
-    PRODUCT ||--o{ ORDER_ITEM : included_in
+    ORDER ||--|| ORDER_ITEM : contains
+    PRODUCT ||--o| ORDER_ITEM : included_in
 ```
 
 
