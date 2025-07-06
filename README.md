@@ -80,8 +80,8 @@ classDiagram
         +getPrice()
     }
     
-    User ||--o{ Order : places
-    Order ||--o{ Product : contains
+    User ||--o Order : places
+    Order ||--o Product : contains
 ```
 
 
