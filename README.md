@@ -21,11 +21,20 @@ sequenceDiagram
     participant User
     participant App
     participant Database
+    participant User1
+    participant App1
+    participant Database1
     
     User->>App: Request data
     App->Database: Query
     Database-->>App: Return results
     App-->User: Display data
+    Note over User1: Client starts process
+    User1->>+App1: Request data
+    App1-->>-Database1: Query
+    Database1-)App1: Return results
+    App1--xUser1: Display data
+    User1->>User1 Validates data
 ```
 
 
